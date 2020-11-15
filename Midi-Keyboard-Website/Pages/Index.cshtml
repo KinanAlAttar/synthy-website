@@ -5,10 +5,10 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Synthy - Midi Keyboard Rhythm Game</h1>
+    <h1 class="display-4">synthy. - basically, 88 key mania</h1>
     <hr />
     <h2>
-        Pictures of the Game
+        Pictures
     </h2>
     <div class="justify-content-end">
         <img src="~/lib/midi-game-start.PNG" width="300" height="200" />
@@ -17,14 +17,14 @@
     </div>
   
     <hr />
-    <h3>Starting the Game</h3>
+    <h3>Starting</h3>
     <p>
         <b>MIDI:  Musical Instrument Digital Interface</b>
         <br />
-        <b>Note (Before Starting the Game): </b>Make sure that you have the application folder in the your home directory and that your midi
+        <b>Note (before starting the game): </b>Make sure that you have the application folder ('synthy/') in the your home directory and that your MIDI
         board is connected!
         <br />
-        Starting the game is easy, all you have to do is install the desired midi file (A file with the .MID or .MIDI file extension that explains what notes are played, when they're played, and how long or loud each note should be.)
+        Starting the game is easy, all you have to do is install the desired MIDI file (A file with the .MID or .MIDI file extension that explains what notes are played, when they're played, and how long or loud each note should be.)
         into the root of the app, and select the file in the game window., as detailed below.
         <br />
         <div>
@@ -33,7 +33,7 @@
 
         <br />
         <br />
-        The game has a performance metric based on how accurately you play the midi file,
+        The game has a performance metric based on how accurately you play through the song,
         basically, how well you hit the key at the appropriate time.
         <br />
 
@@ -41,25 +41,23 @@
 
         <br />
         <br />
-        So, as seen circled in the image above, PF stands for Perfect, OK is self-explanatory,
-        BD is bad, and MS is missed. As you can tell, I'm not the best at playing the game as I have a lot of missed
-        plays. Also, The precentage at the top is how well you have performed in the game.
-
+        So, as seen circled in the image above, PF is within 50ms of note activation, OK is within 100ms, BD is 150ms, and anything outside of that contributs to MS (missed). The precentage at the top is how well you have performed in the game.
+        (Note: turns out making a game doesn't make you good at it.)
         <br />
         <br />
         The brown line circled in the middle is the error bar line, which indicates how well
         the key was hit by showing a vertical line cross the bar line. If the bar is too far to right,
-        that means that you've hit the bar way too late, and if it's to the left that means you've hit
-        the bar way too early.
+        that means that you've hit the note too late, and if it's to the left that means you've hit
+        the note too early.
         <br />
-        <img src="~/lib/bar.PNG" width="600" hegiht="400"/>
+        <img src="~/lib/bar.PNG" width="600" hegiht="400" />
         <br />
         <br />
 
-        <h3>Architecture Of The Game</h3>
-        The game was implemented using C# and the Monogame framework. The library used for reading and processing the midi file and for
-        reading the input from the midi keyboard was DryWetMIDI. More details on the architecture of the game is found here
-        <a href="https://github.com/telastrus/synthy_cs">synthy</a>.
+        <h3>Architecture</h3>
+        The game was implemented using C# and the MonoGame framework. DryWetMIDI was used for reading and processing the MIDI file and for
+        reading the input from the keyboard. More details on the architecture of the game can be found at
+        <i>synthy.</i>'s <a href="https://github.com/telastrus/synthy_cs">GitHub repository</a>.
     </p>
 
 </div>
