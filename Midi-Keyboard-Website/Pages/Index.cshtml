@@ -1,0 +1,65 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Synthy - Midi Keyboard Rhythm Game</h1>
+    <hr />
+    <h2>
+        Pictures of the Game
+    </h2>
+    <div class="justify-content-end">
+        <img src="~/lib/midi-game-start.PNG" width="300" height="200" />
+        <img src="~/lib/midi-board-play-2.PNG" with="300" height="200"/>
+        <img src="~/lib/midi-board-play.PNG" width="300" height="200"/>
+    </div>
+  
+    <hr />
+    <h3>Starting the Game</h3>
+    <p>
+        <b>MIDI:  Musical Instrument Digital Interface</b>
+        <br />
+        <b>Note (Before Starting the Game): </b>Make sure that you have the application folder in the your home directory and that your midi
+        board is connected!
+        <br />
+        Starting the game is easy, all you have to do is install the desired midi file (A file with the .MID or .MIDI file extension that explains what notes are played, when they're played, and how long or loud each note should be.)
+        into the root of the app, and select the file in the game window., as detailed below.
+        <br />
+        <div>
+            <img src="~/lib/start-the-game.PNG" width="600" height="400" />
+        </div>
+
+        <br />
+        <br />
+        The game has a performance metric based on how accurately you play the midi file,
+        basically, how well you hit the key at the appropriate time.
+        <br />
+
+        <img src="~/lib/pf-metric-acc.PNG" width="600" height="400" />
+
+        <br />
+        <br />
+        So, as seen circled in the image above, PF stands for Perfect, OK is self-explanatory,
+        BD is bad, and MS is missed. As you can tell, I'm not the best at playing the game as I have a lot of missed
+        plays. Also, The precentage at the top is how well you have performed in the game.
+
+        <br />
+        <br />
+        The brown line circled in the middle is the error bar line, which indicates how well
+        the key was hit by showing a vertical line cross the bar line. If the bar is too far to right,
+        that means that you've hit the bar way too late, and if it's to the left that means you've hit
+        the bar way too early.
+        <br />
+        <img src="~/lib/bar.PNG" width="600" hegiht="400"/>
+        <br />
+        <br />
+
+        <h3>Architecture Of The Game</h3>
+        The game was implemented using C# and the Monogame framework. The library used for reading and processing the midi file and for
+        reading the input from the midi keyboard was DryWetMIDI. More details on the architecture of the game is found here
+        <a href="https://github.com/telastrus/synthy_cs">synthy</a>.
+    </p>
+
+</div>
